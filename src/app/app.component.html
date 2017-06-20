@@ -1,0 +1,35 @@
+<!--The whole content below can be removed with the new code.-->
+<div class="loginBox">
+  <button (click)="openLogin()">Login</button>
+  <div *ngIf="loginOpen" class="loginOverlay">
+    <label for="winner">Your email</label>
+    <input type="email" name="email" ngModel email>
+  </div>
+</div>
+<div style="text-align:center">
+  <h1>
+    HA Ping Pong Ranking
+  </h1>
+</div>
+<div class="center">
+  <h2>Enter Game Result</h2>
+  <div class="form-group">
+    <label for="winner">Enter Winner</label>
+    <select class="AppComponent" id="winner" required>
+      <option *ngFor="let player of players" [value]="player">{{player}}</option>
+    </select>
+    <label for="loser">Enter Loser</label>
+    <select class="AppComponent" id="loser" required>
+      <option *ngFor="let player of players" [value]="player">{{player}}</option>
+    </select>
+    <button (click)="submitGameResult()">Submit</button>
+  </div>
+
+</div>
+<div class="center">
+  <h2>Leaderboard</h2>
+  <ol>
+    <li>hello</li>
+  </ol>
+</div>
+
